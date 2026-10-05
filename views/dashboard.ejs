@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .dashboard {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .info {
+            background: #f1f1f1;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 5px;
+        }
+
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 20px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .home {
+            background: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <h1>Dashboard</h1>
+
+    <h2>Welcome, <%= username %>!</h2>
+
+    <div class="info">
+        <strong>Session ID:</strong>
+        <%= sessionId %>
+    </div>
+
+    <div class="info">
+        <strong>Visit Count:</strong>
+        <%= visitCount %>
+    </div>
+
+    <p>
+        You have visited this dashboard
+        <strong><%= visitCount %></strong>
+        times during this session.
+    </p>
+
+    <a class="home" href="/">Home</a>
+
+    <a href="/logout">Logout</a>
+
+</div>
+
+</body>
+</html>
